@@ -13,11 +13,16 @@ export function usefindSearchQuery(query) {
 
             const stack_uri = `http://api.positionstack.com/v1/forward?access_key=${secret.POSITIONSTACK_SECRET}&query=${query}&limit=10&output=json`
 
-            const data = await fetch(stack_uri)
-            const jsonData = await data.json()
-            // console.log("jsonData", jsonData);
-
-            setData(jsonData)
+           try {
+             const data = await fetch(stack_uri)
+             const jsonData = await data.json()
+             // console.log("jsonData", jsonData);
+ 
+             setData(jsonData)
+           } catch (error) {
+            console.log("PS",error);
+            
+           }
         }
     }
 
