@@ -1,0 +1,29 @@
+{
+    "$id": "66b9ef2900044edf4cc8",
+    "$createdAt": "2024-08-12T11:16:59.029+00:00",
+    "$updatedAt": "2024-08-12T11:16:59.029+00:00",
+    "name": "martian  moon",
+    "registration": "2024-08-12T11:16:59.028+00:00",
+    "status": true,
+    "labels": [],
+    "passwordUpdate": "2024-08-12T11:16:59.028+00:00",
+    "email": "aditya.me269@gmail.com",
+    "phone": "",
+    "emailVerification": false,
+    "phoneVerification": false,
+    "mfa": false,
+    "prefs": {},
+    "targets": [
+        {
+            "$id": "66b9ef2b124757d9069f",
+            "$createdAt": "2024-08-12T11:16:59.074+00:00",
+            "$updatedAt": "2024-08-12T11:16:59.074+00:00",
+            "name": "",
+            "userId": "66b9ef2900044edf4cc8",
+            "providerId": null,
+            "providerType": "email",
+            "identifier": "aditya.me269@gmail.com"
+        }
+    ],
+    "accessedAt": "2024-08-12T11:16:59.028+00:00"
+}
