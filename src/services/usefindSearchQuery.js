@@ -11,7 +11,7 @@ export function usefindSearchQuery(query) {
             console.warn("API CALL MADE");
             const uri = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${secret.ACCWEATHER_SECRET}&q=${query}`
 
-            const stack_uri = `http://api.positionstack.com/v1/forward?access_key=${secret.POSITIONSTACK_SECRET}&query=${query}&limit=10&output=json`
+            const stack_uri = `https://api.positionstack.com/v1/forward?access_key=${secret.POSITIONSTACK_SECRET}&query=${query}&limit=10&output=json`
 
            try {
              const data = await fetch(stack_uri)
