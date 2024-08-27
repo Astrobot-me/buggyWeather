@@ -5,7 +5,7 @@ import place_svg from "../assets/place.svg"
 import NotFound from "./NotFound";
 import { useSelector } from "react-redux";
 
-export default function WeatherStats({buttons=false,disable = false,animate=false,data=[],getforcast,setDefault }) {
+export default function WeatherStats({place,buttons=false,disable = false,animate=false,data=[],getforcast,setDefault }) {
 
     const [btnText,setbtnText] = useState("Set Default")
     const userConfig = useSelector((state)=>state.auth.userConfig)
@@ -32,7 +32,7 @@ export default function WeatherStats({buttons=false,disable = false,animate=fals
                             <img src={place_svg} className='w-12 h-14' alt="place" draggable={false} />
                             <div className='flex flex-col'>
                                 <label htmlFor="" className='text-lg'>Place</label>
-                                <p className='text-xl'>{`${userConfig?.defaultPlace} ${data.sys.country}`}</p>
+                                <p className='text-xl'>{`${place || userConfig?.defaultPlace  } ${data.sys.country}`}</p>
                             </div>
                         </div>
                         <div className=''>

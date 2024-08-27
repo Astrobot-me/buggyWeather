@@ -29,7 +29,7 @@ export default function GetWeather() {
     const longitude = searchParams.get("long") || userConfig?.defaultLong;
     const place = searchParams.get("place") || userConfig?.defaultPlace;
 
-    //Initially Default Places were hardcoded, leaving the place co-ords here
+    //Initially Default Place were hardcoded, leaving the place co-ords here
     // lat : 26.904789
     // long : 75.756797
     // place : Jaipur :)
