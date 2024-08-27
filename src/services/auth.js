@@ -19,7 +19,7 @@ class AuthenticationService {
     
         try {
             const createdAccount = await this.account.create(ID.unique(), email, password, name);
-    
+            
             if (createdAccount) {
                        
                 const loggedInUser = await this.login({email,password})
