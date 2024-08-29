@@ -31,12 +31,12 @@ export default function Searchcard() {
     
     return (
         <>
-            <div className="card-normal w-[80%] rounded-lg bg-gray-900" ref={ref} onBlur={handleDisappear}>
-                <div className="card-body w-[100%] ">
+            <div className="card-normal w-[80%] rounded-lg bg-gray-900 text-white " ref={ref} onBlur={handleDisappear}>
+                <div className="card-body w-[100%] text-white ">
                     <h1 className="card-title">Get Latest weather information</h1>
-                    <span className="label-text">Search Location</span>
+                    <span className="label-text text-white">Search Location</span>
                     <div className="relative" >
-                        <input type="text" name="" id="" value={query} className="input input-bordered w-full "
+                        <input type="text" name="" id="" value={query} className=" bg-slate-800  input input-bordered w-full "
                             onChange={(e) => {
                                 setQuery(e.target.value)
                                 setVisible(true)

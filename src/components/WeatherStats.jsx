@@ -25,7 +25,7 @@ export default function WeatherStats({place,buttons=false,disable = false,animat
 
     return (
         <>
-            <div className='flex flex-col p-3 w-[100%] ease-in gap-3 '>
+            <div className='flex flex-col p-3 w-[100%] ease-in gap-3 text-white'>
                 <div className='flex w-[100%] justify-between'>
                     <div className='flex gap-10'>
                         <div className='flex flex-row gap-2'>
@@ -104,7 +104,7 @@ export default function WeatherStats({place,buttons=false,disable = false,animat
             { buttons && (
                 <div className='flex items-center justify-center gap-3 '>
                     <button className='btn btn-warning' onClick={()=>{getforcast()}} >Get Weather forecast</button>
-                    <button className='btn btn-primary' disabled={disable} value={btnText} onClick={()=>{setDefault()}}>Set Default</button>
+                    <button className='btn btn-primary ' disabled={disable} value={btnText} onClick={()=>{setDefault()}}>Set Default</button>
                 </div>
             )
 

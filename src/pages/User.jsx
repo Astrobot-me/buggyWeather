@@ -112,19 +112,19 @@ export default function User() {
                 <CardFrame width="sm:w-[70%] w-full" title="User Config Settings ⚙">
                     <div className="w-[100%] flex flex-col gap-2">
                         <label class="form-control w-[100%] ">
-                            <div class="label">
-                                <span class="label-text">Home City</span>
-                                <span class="label-text-alt">Default</span>
+                            <div class="label text-white">
+                                <span class="label-text text-white">Home City</span>
+                                <span class="label-text-alt text-white">Default</span>
                             </div>
-                            <input type="text" value={userConfig.defaultPlace} class="input  w-[100%]" disabled={true} />
-
+                            <input type="text " value={userConfig.defaultPlace} class="input  w-[100%] bg-slate-800 " disabled={true} />
+  
                         </label>
 
                         <label class="form-control w-[100%] ">
                             <div class="label">
-                                <span class="label-text">Select default Unit Imerial /metric</span>
+                                <span class="label-text text-white">Select default Unit Imerial /metric</span>
                             </div>
-                            <select class="select select-bordered" onChange={(e)=>setMetric(e.target.value)}>
+                            <select class="select select-bordered bg-slate-800 " onChange={(e)=>setMetric(e.target.value)}>
                                 <option disabled >Pick one</option>
                                 <option selected={(userConfig.defaultMetric === "imperial")} value={`imperial`} >Imperial</option>
                                 <option selected={(userConfig.defaultMetric === "metric")} value={`metric`} >metric</option>
@@ -134,9 +134,10 @@ export default function User() {
                         </label>
                         <label class="form-control w-[100%] ">
                             <div class="label">
-                                <span class="label-text">Select Forecast Count</span>
+                                <span class="label-text text-white">Select Forecast Count</span>
                             </div>
-                            <select class="select select-bordered" onChange={(e)=>setCount(e.target.value)}>
+                            <select class="select select-bordered bg-slate-800" onChange={(e)=>setCount(e.target.value)}>
+
                                 <option disabled selected>Pick one</option>
                                 <option selected={(userConfig.defaultCnt == 10)} value={`10`}>10</option>
                                 <option selected={(userConfig.defaultCnt == 15)} value={`15`}>15</option>
