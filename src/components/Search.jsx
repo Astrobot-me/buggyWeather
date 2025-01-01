@@ -1,22 +1,24 @@
 import React, { useEffect,useRef, useState } from "react";
 import { usefindSearchQuery } from "../services/usefindSearchQuery";
 import Dropdown from "./Dropdown";
-
+import { useDebounceCallback } from 'usehooks-ts'
 
 
 export default function Searchcard() {
     const [query, setQuery] = useState("")
-    const [data, setData] = useState([])
+    const [searchQuery,setSearchQuery] = useState("")
     const [isVisible,setVisible] = useState(false)
     const ref = useRef(null)
 
-    let searchData = usefindSearchQuery(query.toLowerCase())
+    let searchData = usefindSearchQuery(searchQuery.toLowerCase())
     // setData(searchData)
 
-    const handleSearchQuery = async () => {
-        searchData = usefindSearchQuery(query.toLowerCase())
+    // const handleSearchQuery = async () => {
+    //     searchData = usefindSearchQuery(query.toLowerCase())
         
-    }
+    // }
+
+    const debounced = useDebounceCallback(setSearchQuery,500)
 
     const handleDisappear = (e) =>{
         // setData(null)
@@ -39,6 +41,7 @@ export default function Searchcard() {
                         <input type="text" name="" id="" value={query} className=" bg-slate-800  input input-bordered w-full "
                             onChange={(e) => {
                                 setQuery(e.target.value)
+                                debounced(e.target.value)
                                 setVisible(true)
                             }}
                             onClick={()=>{
